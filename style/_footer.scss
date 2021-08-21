@@ -1,0 +1,75 @@
+.footer {
+    &_container {
+        grid-gap: 5rem;
+    }
+    &_content {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 2rem;
+    }
+    &_title,
+    &_subtitle {
+        font-size: $h3-font-size;
+    }
+    &_title {
+        margin-bottom: $mb-0-5;
+    }
+    &_desc {
+        margin-bottom: $mb-2;
+    }
+    &_social {
+        font-size: 1.25rem;
+        color: $title-color;
+        margin-right: $mb-1-25;
+    }
+    &_subtitle {
+        margin-bottom: $mb-1;
+    }
+    &_item {
+        margin-bottom: $mb-0-75;
+    }
+    &_link {
+        color: $text-color;
+        &:hover {
+            color: $title-color;
+        }
+    }
+    &_rights {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+    &_copy,
+    &_terms-link {
+        font-size: $small-font-size;
+        color: $text-color-light;
+    }
+    &_terms-link {
+        display: flex;
+        column-gap: 1.5rem;
+        justify-content: center;
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
+
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: $first-color;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 0.5rem;
+    display: flex;
+    opacity: 0.9;
+    z-index: $z-tooltip;
+    transition: all 0.5s linear;
+    &-icon {
+        color: #ffff;
+    }
+}
+
+.show-scroll {
+    bottom: 5rem;
+}

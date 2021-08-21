@@ -1,0 +1,39 @@
+.about {
+    // &_img {
+    //     margin-top: 25px;
+    //     &-one {
+    //         margin-bottom: 20px;
+    //     }
+    // }
+    &_container {
+        row-gap: 2.5rem;
+    }
+    &_desc {
+        margin-bottom: $mb-2;
+    }
+    &_img {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    &_img {
+        &-overplay {
+            overflow: $img-hidden;
+        }
+        &-one {
+            width: 130px;
+        }
+        &-two {
+            width: 180px;
+        }
+        &-one,
+        &-two {
+            transition: $img-transition;
+        }
+        &-one:hover,
+        &-two:hover {
+            transform: $img-scale;
+        }
+    }
+}

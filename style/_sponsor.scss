@@ -1,0 +1,21 @@
+.sponsor {
+    &_container {
+        //lấp đầy khoảng trống 
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        justify-content: center;
+        grid-gap: 3.5rem;
+    }
+    &_img {
+        width: 90px;
+        //làm mờ 
+        filter: invert(.7);
+        transition: $img-transition;
+    }
+    &_content:hover>&_img {
+        filter: invert(.5);
+    }
+}
+
+// .sponsor_content:hover.sponsor_img {
+//     filter: invert(.5);
+// }

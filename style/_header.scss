@@ -1,0 +1,101 @@
+// HEADER
+.header {
+    width: 100%;
+    //cho scroll xuống cố định
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-fixed;
+    background-color: transparent;
+}
+
+//nav
+.nav {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_logo,
+    &_toggle {
+        color: $white-color;
+    }
+    &_logo {
+        font-weight: $font-semi-bold;
+        background-image: linear-gradient(to left, rgb(22, 144, 245), rgba(11, 123, 167, 0.91));
+        text-transform: uppercase;
+        display: block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    &_toggle {
+        font-size: 1.2rem;
+        cursor: pointer;
+        background-image: linear-gradient(to left, rgb(43, 117, 255), rgba(208, 54, 255, 0.91));
+        text-transform: uppercase;
+        display: block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        //cho các hàng dãn ra
+        row-gap: 2.5rem;
+    }
+    &_menu {
+        position: relative;
+    }
+    &_link {
+        color: $text-color-light;
+        font-weight: $font-semi-bold;
+        text-transform: uppercase;
+        &:hover {
+            color: $text-color;
+            border-bottom: 1px solid #2c9dfa;
+            // background-image: linear-gradient(to right, rgb(73, 76, 248), rgb(241, 121, 65));
+        }
+    }
+    &_close {
+        //set vị trí cho nút đóng
+        position: absolute;
+        top: 0.75rem;
+        right: 1rem;
+        font-size: 1.4rem;
+        color: $title-color;
+    }
+}
+
+//responsive header
+@media screen and (max-width: 767px) {
+    .nav {
+        &_menu {
+            position: fixed;
+            background-color: $body-color;
+            top: 0;
+            right: -100%;
+            @include size(70%, 100%);
+            // width: 70%;
+            // height: 100%;
+            // @include size(70%, 100%);
+            box-shadow: -1px 0 4px hsla($hue-color, 64%, 15%, .15);
+            padding: 3rem;
+            transition: .4s;
+        }
+    }
+}
+
+.show-menu {
+    right: 0;
+}
+
+.scroll-header {
+    background-color: $body-color;
+    box-shadow: 0 0 4px hsla($hue-color, 64%, 15%, .15);
+}
+
+.scroll-header .nav_logo,
+.scroll-header .nav_toggle {
+    color: $title-color;
+}

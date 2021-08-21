@@ -1,0 +1,66 @@
+.place {
+    &_card,
+    &_img {
+        height: 230px;
+    }
+    &_container {
+        grid-template-columns: repeat(2, max-content);
+        justify-content: center;
+        grid-gap: 2rem;
+    }
+    &_card {
+        position: relative;
+        overflow: $img-hidden;
+    }
+    &_content,
+    &_title {
+        color: $white-color;
+    }
+    &_content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.75rem 0.75rem 1rem;
+    }
+    &_rating {
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        &-icon {
+            font-size: 0.75rem;
+            margin-right: $mb-0-25;
+        }
+        &-numbers {
+            font-size: $smaller-font-size;
+        }
+    }
+    &_subtitle,
+    &_price {
+        display: block;
+    }
+    &_title {
+        font-size: $h3-font-size;
+        margin-bottom: $mb-0-25;
+    }
+    &_subtitle {
+        font-size: $smaller-font-size;
+        margin-bottom: $mb-1-25;
+    }
+    &_button {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+    }
+    &_img {
+        transition: $img-transition;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

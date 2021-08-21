@@ -1,0 +1,79 @@
+.home {
+    &_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%, 100vh);
+        object-fit: cover;
+        object-position: 85%;
+    }
+    &_container {
+        position: relative;
+        height: calc(100vh - 3rem);
+        align-content: center;
+        justify-content: center;
+        row-gap: 3rem;
+    }
+    &_data-subtitle,
+    &_data-title,
+    &_social-link {
+        background-image: linear-gradient(to right, rgb(73, 76, 248), rgb(241, 121, 65));
+        display: block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    &_data-subtitle {
+        display: block;
+        font-weight: $font-semi-bold;
+        margin-bottom: $mb-0-75;
+    }
+    &_data-title {
+        font-size: $biggest-font-size;
+        font-weight: $font-medium;
+        margin-bottom: $mb-2-5;
+    }
+    &_social {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+    &_social-link {
+        font-size: 1.2rem;
+        width: max-content;
+    }
+    //làm thanh giới thiệu mini 
+    &_info {
+        color: $white-color;
+        background-color: $first-color;
+        display: flex;
+        padding: 1.5rem 1rem;
+        align-items: center;
+        column-gap: 0.5rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 230px;
+        &-title {
+            display: block;
+            font-size: $small-font-size;
+            font-weight: $font-semi-bold;
+            margin-bottom: $mb-0-75;
+        }
+        &-button {
+            font-size: $smaller-font-size;
+        }
+        &-overplay {
+            //cho tấm ảnh ẩn co lại 
+            overflow: $img-hidden;
+        }
+        &-img {
+            width: 145px;
+            transition: $img-transition;
+        }
+        &-img:hover {
+            // khiấn vào thì dãn ra 
+            transform: $img-scale;
+        }
+    }
+}

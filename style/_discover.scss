@@ -1,0 +1,43 @@
+.discover {
+    &_card {
+        position: relative;
+        width: 200px;
+        overflow: $img-hidden;
+    }
+    //cho chữ sát vào hình 
+    &_data {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1rem;
+    }
+    &_title,
+    &_desc {
+        background-image: linear-gradient(to left, rgb(247, 165, 57), rgb(64, 250, 172));
+        display: inline-block;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+    &_title {
+        font-size: $h3-font-size;
+        margin-bottom: $mb-0-25;
+    }
+    &_desc {
+        display: block;
+        font-size: $smaller-font-size;
+    }
+    &_img {
+        transition: $img-transition;
+        &:hover {
+            transform: $img-scale;
+        }
+    }
+}
+
+.section_title {
+    background-image: linear-gradient(to left, rgb(247, 165, 57), rgb(64, 250, 172));
+    display: inline-block;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
